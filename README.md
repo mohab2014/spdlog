@@ -1,24 +1,4 @@
 
-
-## Features
-* Very fast - performance is the primary goal (see [benchmarks](#benchmarks) below).
-* Headers only, just copy and use.
-* Feature rich using the excellent [fmt](https://github.com/fmtlib/fmt) library.
-* Fast asynchronous mode (optional)
-* [Custom](https://github.com/gabime/spdlog/wiki/3.-Custom-formatting) formatting.
-* Conditional Logging
-* Multi/Single threaded loggers.
-* Various log targets:
-    * Rotating log files.
-    * Daily log files.
-    * Console logging (colors supported).
-    * syslog.
-    * Windows debugger (```OutputDebugString(..)```)
-    * Easily extendable with custom log targets  (just implement a single function in the [sink](include/spdlog/sinks/sink.h) interface).
-* Severity based filtering - threshold levels can be modified in runtime as well as in compile time.
-
-
-
 ## Benchmarks
 
 Below are some [benchmarks](https://github.com/gabime/spdlog/blob/v1.x/bench/bench.cpp) done in Ubuntu 64 bit, Intel i7-4770 CPU @ 3.40GHz
