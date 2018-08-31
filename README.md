@@ -1,4 +1,49 @@
 
+# spdlog
+
+Very fast, header only, C++ logging library. [![Build Status](https://travis-ci.org/gabime/spdlog.svg?branch=master)](https://travis-ci.org/gabime/spdlog)&nbsp; [![Build status](https://ci.appveyor.com/api/projects/status/d2jnxclg20vd0o50?svg=true)](https://ci.appveyor.com/project/gabime/spdlog)
+
+
+## Install
+#### Just copy the headers:
+
+* Copy the source [folder](https://github.com/gabime/spdlog/tree/v1.x/include/spdlog) to your build tree and use a C++11 compiler.
+
+#### Or use your favorite package manager:
+
+* Ubuntu: `apt-get install libspdlog-dev`
+* Homebrew: `brew install spdlog`
+* FreeBSD:  `cd /usr/ports/devel/spdlog/ && make install clean`
+* Fedora: `yum install spdlog`
+* Gentoo: `emerge dev-libs/spdlog`
+* Arch Linux: `yaourt -S spdlog-git`
+* vcpkg: `vcpkg install spdlog`
+ 
+
+## Platforms
+ * Linux, FreeBSD, Solaris, AIX
+ * Windows (vc 2013+, cygwin)
+ * Mac OSX (clang 3.5+)
+ * Android
+
+## Features
+* Very fast - performance is the primary goal (see [benchmarks](#benchmarks) below).
+* Headers only, just copy and use.
+* Feature rich using the excellent [fmt](https://github.com/fmtlib/fmt) library.
+* Fast asynchronous mode (optional)
+* [Custom](https://github.com/gabime/spdlog/wiki/3.-Custom-formatting) formatting.
+* Conditional Logging
+* Multi/Single threaded loggers.
+* Various log targets:
+    * Rotating log files.
+    * Daily log files.
+    * Console logging (colors supported).
+    * syslog.
+    * Windows debugger (```OutputDebugString(..)```)
+    * Easily extendable with custom log targets  (just implement a single function in the [sink](include/spdlog/sinks/sink.h) interface).
+* Severity based filtering - threshold levels can be modified in runtime as well as in compile time.
+
+
 ## Benchmarks
 
 Below are some [benchmarks](https://github.com/gabime/spdlog/blob/v1.x/bench/bench.cpp) done in Ubuntu 64 bit, Intel i7-4770 CPU @ 3.40GHz
